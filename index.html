@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="STYLE.css">
+
+  <!--Favicon-->
+  <link href="images/logo.png" rel="icon">
+
+  <!-- Latest compiled and minified CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+	<title>apartment</title>
+</head>
+<body class="body1">
+  <article class="content">
+    <header>
+      <div class="main_bar">
+          <img src="images/logo.png"  alt="" class="logo">
+          <a href="market.html" class="bar">Markets</a>
+          <a href="Advt.php" class="bar">Advertise with Us</a>
+          <a href="Buy.php" class="bar">Request Apartment</a>
+          <a href="about.html" class="bar"> About </a>
+          <a href="news.html" class="bar">News</a>
+          <a class="bar"><span style="font-size:20px;cursor:pointer" onclick="openNav()" class="fnd">Founder</span></a>
+          <!-- Hamburger Menu Icon -->
+          <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">&#9776;</a>
+      </div>           
+    </header>
+    <div id="mobileMenu" class="mobile-menu">      
+      <a href="javascript:void(0);" class="closebtn" onclick="toggleMenu()">&times;</a>
+      <a class="bar"><span style="font-size:20px;cursor:pointer" onclick="openNav()" class="fnd">Founder</span></a>
+      <a href="market.html">Markets</a>
+      <a href="Advt.php">Advertise with Us</a>
+      <a href="Buy.php">Request Apartment</a>
+      <a href="about.html">About</a>
+      <a href="news.html">News</a>
+    </div>
+    <script>
+      function toggleMenu() {
+        var x = document.getElementById("mobileMenu");
+        if (x.style.display === "block" || x.style.display === "") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
+        }
+      }
+    </script> 
+    <section>
+      <div>
+        <h1 class="LE">Luxurious Apartments Kisumu</h1>
+      </div>
+      
+      <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content founder-p">
+          <img src="images/founder.png" alt="" class="founder">
+          <h2 class="mx">Max Millan</h2>
+          <div>
+            <h1>Luxurious Apartment</h1>
+            <p>I create this website for the purpose of advertising  the Luxurious Apartment 
+                like homes, real estates, hotels and restaurants. These apartments are ready for sell.
+                The most customer whom can benefit from this website, are those wants to own an apartment.
+                just on the home page click <b><u>Market</u></b> to see your dream apartment.
+                <br><br/>
+                Secondly, to our customer who would like to advertise with us(if you have an apartment to be advertised), can also 
+                benefit from this website. just click <b><u>Advertise With Us</u></b> in the home page and input your inputs.
+            </p>
+          </div>
+          <p>Contact for more information call <u><b>+254742273610</b></u></p>
+          <br/>
+          <br>
+        </div>
+      </div>   
+    
+      
+      <script>
+      function openNav() {
+        document.getElementById("myNav").style.width = "80%";
+      }
+      
+      function closeNav() {
+        document.getElementById("myNav").style.width = "0%";
+      }
+      </script>  
+    </section>
+    <footer>
+      <p style="margin-bottom: 2px;">Quality apartment.</p>
+      <p style="margin-bottom: 0px; font-size: 13px;">&copy Copyright Millan.All Reserved.  Powered by Millan Web Creator.</p>
+    </footer>
+  </article>	
+</body>
+</html>
