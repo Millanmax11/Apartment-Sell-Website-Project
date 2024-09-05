@@ -21,10 +21,9 @@ echo "Connected successfully";
 $host="apartments-on-sell-02-maxwelotieno011-9723.k.aivencloud.com";
 $username="avnadmin";
 $password="AVNS_857YXcdFeSYsfe19jLH";
-$dbname="db_apartment"
 
 //connect to database
-$db=mysqli_connect($host, $username, $password, $dbname) or die('Connection failed on database');
+$db=mysqli_connect($host, $username, $password, "db_apartment") or die('Connection failed on database');
 if(isset($_POST['reg'])){
 
     //receive all inputs from the form
