@@ -1,13 +1,30 @@
 <?php
-session_start();                                                // server for Advertise with us
+session_start();   
+/*
+$servername = "localhost";
+$username = "username";
+$password = "password";
+$database = "database";
 
+// Create connection
+$conn = mysqli_connect($servername, $username, $password, $database);
+
+// Check connection
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+echo "Connected successfully";
+*/
+
+// server for Advertise with us
 //initialize variables
-$host="localhost";
-$username="id19906857_apartment";
-$password="mary01pio";
+$host="apartments-on-sell-02-maxwelotieno011-9723.k.aivencloud.com";
+$username="avnadmin";
+$password="AVNS_857YXcdFeSYsfe19jLH";
+$dbname="db_apartment"
 
 //connect to database
-$db=mysqli_connect('localhost', 'id19906857_millanh', 'cEc/q]VFR$r9*4o%','id19906857_apart') or die('Connection failed on database');
+$db=mysqli_connect($host, $username, $password, $dbname) or die('Connection failed on database');
 if(isset($_POST['reg'])){
 
     //receive all inputs from the form
@@ -22,8 +39,6 @@ $query="INSERT INTO myTB(name, email, phone, county)
         $_SESSION['success']="Your Submition is Successful";
         header('location: success.php');
 }
-
-
 
 
 ?>
