@@ -4,7 +4,7 @@ session_start();
 // server for Advertise with us
 //initialize variables
 $host="tj5iv8piornf713y.cbetxkdyhwsb.us-east-1.rds.amazonaws.com";
-$username="gdwzayqi83kpydm6	";
+$username="gdwzayqi83kpydm6";
 $password="a8xezuretpx2qkgj";
 
 //connect to database
