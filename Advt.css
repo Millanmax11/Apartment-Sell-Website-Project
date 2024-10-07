@@ -40,6 +40,9 @@ body{
 }
 @media screen and (max-width: 768px) {
   /*background */
+  body{
+    position: fixed;
+  }
   .body1
   {
       background-image: url("images/adv-back_phone.png");
