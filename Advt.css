@@ -55,7 +55,10 @@ body{
   
   }
   main {
-    width: 200%;
+    width: 200%; /* Expands the form */
+    position: relative;
+    left: 50%; /* Moves the form to the right by 50% */
+    transform: translateX(-50%); /* Shifts it back to the center */
 
 }
 .input-group input, .input-group button {
