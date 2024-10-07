@@ -52,12 +52,8 @@ body{
   
   }
   main {
-    width: 100%;
-    padding: 0px;
+    width: 300%;
 
-}
-form{
-  max-width: 100%;
 }
 .input-group input, .input-group button {
     width: 95%;
