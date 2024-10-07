@@ -111,6 +111,18 @@ article
 
 /* Responsive Styles */
 @media screen and (max-width: 768px) {
+/*background */
+.body1
+{
+    background-image: url("images/background_phone.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    max-width: 100%;
+    height: 100%;
+
+}
   .main_bar a.bar {
       display: none; /* Hide the regular links */
   }
