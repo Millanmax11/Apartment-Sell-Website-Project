@@ -52,7 +52,9 @@ body{
   
   }
   main {
-    padding: 20px;
+    width: 100px;
+    padding: 10px;
+
 }
 
 .input-group input, .input-group button {
