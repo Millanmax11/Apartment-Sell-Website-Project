@@ -2,6 +2,8 @@
 <html>
   <link>
     <!--Favicon-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link href="images/logo.png" rel="icon">
     <link rel="stylesheet" href="STYLE.css">
 
@@ -49,7 +51,15 @@ article
   flex-wrap: wrap;
   padding: 0 4px;
 }
-
+.card{
+  margin-bottom: 12px;
+  border: 1px solid #0ac040;;
+}
+.card:hover {
+  border: 1px solid #777;
+  transform: scale(1.02);
+  transition: transform 0.3s ease-in-out;
+}
 /* Create four equal columns that sits next to each other */
 .column {
   -ms-flex: 25%; /* IE10 */
@@ -60,28 +70,58 @@ article
 }
 
 .column img {
-  margin-top: 8px;
+  margin-top: 0px;
   vertical-align: middle;
   width: 100%;
   height: 150px;
 }
 
 /* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 800px) {
-  .column img{
-    -ms-flex: 50%;
-    flex: 50%;
-    max-width: 50%;
-  }
+@media screen and (max-width: 786px) {
+  .column {
+  -ms-flex: 100%; /* IE10 */
+  flex: 100%;
+  max-width: 100%;
+  padding: 0 4px;
+  float: left;
 }
 
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .column img{
-    -ms-flex: 100%;
-    flex: 100%;
-    max-width: 100%;
-  }
+.column img {
+  margin-top: 0px;
+  vertical-align: middle;
+  width: 100%;
+  height: 200px;
+}
+}
+
+/* Modal for Image Zoom */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal img {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 #req
@@ -137,19 +177,19 @@ article
     <!--Estate-->
     <div class="column">
         <div class="card">
-            <img src="images/estate6.png" alt="Manyatta Estate">
+            <img src="images/estate6.png" alt="Manyatta Estate" class="pictures">
             <div class="details">
                 <p>Manyatta_Estate<br/>3 Bed Rooms<br/>KSH 2.5 Million</p>
             </div>
         </div>
         <div class="card">
-            <img src="images/estate1.png" alt="Kondele Estate">
+            <img src="images/estate1.png" alt="Kondele Estate" class="pictures">
             <div class="details">
                 <p>Kondele_Estate<br/>2 Bed Rooms<br/>KSH 3.0 Million</p>
             </div>
         </div>
         <div class="card">
-            <img src="images/estate2.png" alt="Millimani Estate">
+            <img src="images/estate2.png" alt="Millimani Estate" class="pictures">
             <div class="details">
                 <p>Millimani_Estate<br/>3 Bed Rooms<br/>KHS 2.8 Million</p>
             </div>
@@ -158,19 +198,19 @@ article
     <!--Home-->
     <div class="column">
         <div class="card">
-            <img src="images/home1.png" alt="Njogo Road Homes">
+            <img src="images/home1.png" alt="Njogo Road Homes" class="pictures">
             <div class="details">
                 <p>Njogo Road_Homes<br/>4 Bed Rooms + 2 Sitting Rooms<br/>KHS 17.0 Million</p>
             </div>
         </div>
         <div class="card">
-            <img src="images/home2.png" alt="Lwanda Road Homes">
+            <img src="images/home2.png" alt="Lwanda Road Homes" class="pictures">
             <div class="details">
                 <p>Lwanda Road_Homes<br/>5 Bed Rooms + 2 Sitting Rooms<br/>KHS 13.0 Million</p>
             </div>
         </div>
         <div class="card">
-            <img src="images/home3.png" alt="Tokish Road Homes">
+            <img src="images/home3.png" alt="Tokish Road Homes" class="pictures">
             <div class="details">
                 <p>Tokish Road_Homes<br/>4 Bed Rooms + 2 Sitting Rooms<br/>KHS 15.0 Million</p>
             </div>
@@ -179,19 +219,19 @@ article
     <!--Hotel-->
     <div class="column">
         <div class="card">
-            <img src="images/hotel1.png" alt="Naivas Street Hotels">
+            <img src="images/hotel1.png" alt="Naivas Street Hotels" class="pictures">
             <div class="details">
                 <p>Naivas Street_Hotels<br/>200 Lodgings + 20 Conference Rooms<br/>KHS 150 Million</p>
             </div>
         </div>
         <div class="card">
-            <img src="images/hotel2.png" alt="KPLC Tower Street Hotels">
+            <img src="images/hotel2.png" alt="KPLC Tower Street Hotels" class="pictures">
             <div class="details">
                 <p>KPLC Tower Street_Hotels<br/>178 Lodgings + 10 Conference Rooms<br/>KHS 200 Million</p>
             </div>
         </div>
         <div class="card">
-            <img src="images/hotels4.png" alt="Ndunga Beach Hotels">
+            <img src="images/hotels4.png" alt="Ndunga Beach Hotels" class="pictures">
             <div class="details">
                 <p>Ndunga Beach_Hotels<br/>184 Lodgings + 5 Conference Rooms<br/>KHS 170 Million</p>
             </div>
@@ -200,25 +240,48 @@ article
     <!--Restaurant-->
     <div class="column">
         <div class="card">
-            <img src="images/recreational1.png" alt="Dunga Beach Restaurants">
+            <img src="images/recreational1.png" alt="Dunga Beach Restaurants" class="pictures">
             <div class="details">
                 <p>Dunga Beach_Restaurants<br/>2 Swimming Pools + 20 Lodgings<br/>KHS 180 Million</p>
             </div>
         </div>
         <div class="card">
-            <img src="images/recreational2.png" alt="Kibos Tower Road Restaurants">
+            <img src="images/recreational2.png" alt="Kibos Tower Road Restaurants" class="pictures">
             <div class="details">
                 <p>Kibos Tower Road_Restaurants<br/>3 Swimming Pools + 35 Lodgings<br/>KHS 196 Million</p>
             </div>
         </div>
         <div class="card">
-            <img src="images/recreational4.png" alt="Kondele Road Restaurants">
+            <img src="images/recreational4.png" alt="Kondele Road Restaurants" class="pictures">
             <div class="details">
                 <p>Kondele Road_Restaurants<br/>4 Swimming Pools + 50 Lodgings<br/>KHS 210 Million</p>
             </div>
         </div>
     </div>
+    <!-- Modal for Zoomed Screenshot -->
+<div id="imageModal" class="modal">
+  <span class="modal-close" onclick="closeModal()">&times;</span>
+  <img id="modalImage" src="">
 </div>
+<script>
+  // Image Zoom Feature
+  const screenshots = document.querySelectorAll('.pictures');
+  const modal = document.getElementById('imageModal');
+  const modalImg = document.getElementById('modalImage');
+
+  screenshots.forEach(screenshot => {
+      screenshot.addEventListener('click', function() {
+          modal.style.display = 'block';
+          modalImg.src = this.src;
+      });
+  });
+
+  // Close the Modal
+  function closeModal() {
+      modal.style.display = 'none';
+  }
+</script>
+  </div>
 
         <div class="details" id="req">
           <p>Click the link below to send your desired apartment details. <br>
