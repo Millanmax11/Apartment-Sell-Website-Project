@@ -1,14 +1,16 @@
 <?php
 session_start();   
+require_once 'config.php';
 
 // server for Advertise with us
-//initialize variables
-$host="apartments-on-sell-02-maxwelotieno011-9723.k.aivencloud.com";
-$username="avnadmin";
-$password="AVNS_857YXcdFeSYsfe19jLH";
+// Retrieve environment variables
+$host = getenv('DB_HOST');
+$username = getenv('DB_USERNAME');
+$password = getenv('DB_PASSWORD');
+$dbname = getenv('DB_NAME');
 
 //connect to database
-$db=mysqli_connect($host, $username, $password, "db_apartment") or die('Connection failed on database');
+$db=mysqli_connect($host, $username, $password, $dbname) or die('Connection failed on database');
 if(isset($_POST['reg'])){
 
     //receive all inputs from the form
