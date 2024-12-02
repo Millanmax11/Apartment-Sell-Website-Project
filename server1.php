@@ -3,12 +3,12 @@ session_start();
 
 // server for Advertise with us
 //initialize variables
-$host="tj5iv8piornf713y.cbetxkdyhwsb.us-east-1.rds.amazonaws.com";
-$username="gdwzayqi83kpydm6";
-$password="a8xezuretpx2qkgj";
+$host="apartments-on-sell-02-maxwelotieno011-9723.k.aivencloud.com";
+$username="avnadmin";
+$password="AVNS_857YXcdFeSYsfe19jLH";
 
 //connect to database
-$db=mysqli_connect($host, $username, $password, "h0ytf546ofy3zrq5") or die('Connection failed on database');
+$db=mysqli_connect($host, $username, $password, "db_apartment") or die('Connection failed on database');
 if(isset($_POST['reg'])){
 
     //receive all inputs from the form
